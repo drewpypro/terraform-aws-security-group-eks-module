@@ -33,6 +33,7 @@ terraform-aws-security-group-eks-module/
 
 # Vending Account Usage
 
+```
 variables "services" {
   description "authorized services that require vpc endpoint security groups"
   type = list(string)
@@ -45,26 +46,4 @@ module "eks-sg-template" {
   services = var.services
   name = var.name
 }
-
-
-
-# EKS SG Module
-terraform-aws-security-group-eks-module
-|--main.tf
---variables.tf
---modules/
-----istio-sg/
-----internet-istio-sg/
-----worker-node-sg/
-----cluster-endpoint-sg/
-----intranet-nlb-sg/
-----internet-nlb-sg/
-----dms-sg/
-----efs-mount-endpoint-sg
-----rds-sg/
-----msk-sg/
-----elastic-cache-sg/
-----opensearch-sg/
-----vpce-module-sg/
-----App1Lambda-sg/
-----App2Lambda-sg
+```
