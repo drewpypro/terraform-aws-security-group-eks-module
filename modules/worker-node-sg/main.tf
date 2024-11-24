@@ -21,7 +21,7 @@ resource "aws_vpc_security_group_ingress_rule" "worker_node_ingress_rule2" {
   from_port                    = 443
   to_port                      = 443
   ip_protocol                  = "tcp"
-  referenced_security_group_id = lookup(var.referenced_sg_ids, "istio_nodes", null)
+  referenced_security_group_id = lookup(var.referenced_sg_ids, "istio_node", null)
 }
 
 resource "aws_vpc_security_group_egress_rule" "worker_node_egress_rule1" {
