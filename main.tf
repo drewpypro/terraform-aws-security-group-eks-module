@@ -319,9 +319,3 @@ module "worker_node" {
     # worker_node         = module.worker_node.worker_node_sg_id
   }
 }
-
-
-output "security_group_ids" {
-  value = module.security_groups.security_group_ids
-}
-
