@@ -1,6 +1,6 @@
 module "app1_lambda" {
   source = "./modules/app1-lambda-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -23,7 +23,7 @@ module "app1_lambda" {
 
 module "app2_lambda" {
   source = "./modules/app2-lambda-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -46,7 +46,7 @@ module "app2_lambda" {
 
 module "cluster_endpoint" {
   source = "./modules/cluster-endpoint-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -69,7 +69,7 @@ module "cluster_endpoint" {
 
 module "dms" {
   source = "./modules/dms-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -92,7 +92,7 @@ module "dms" {
 
 module "efs_mount_endpoint" {
   source = "./modules/efs-mount-endpoint-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -115,7 +115,7 @@ module "efs_mount_endpoint" {
 
 module "elastic_cache" {
   source = "./modules/elastic-cache-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -138,7 +138,7 @@ module "elastic_cache" {
 
 module "internet_istio_node" {
   source = "./modules/internet-istio-node-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -161,7 +161,7 @@ module "internet_istio_node" {
 
 module "internet_nlb" {
   source = "./modules/internet-nlb-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -184,7 +184,7 @@ module "internet_nlb" {
 
 module "istio_node" {
   source = "./modules/istio-node-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -207,7 +207,7 @@ module "istio_node" {
 
 module "msk" {
   source = "./modules/msk-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -230,7 +230,7 @@ module "msk" {
 
 module "nlb" {
   source = "./modules/nlb-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -253,7 +253,7 @@ module "nlb" {
 
 module "opensearch" {
   source = "./modules/opensearch-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -276,7 +276,7 @@ module "opensearch" {
 
 module "rds" {
   source = "./modules/rds-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
@@ -299,7 +299,7 @@ module "rds" {
 
 module "worker_node" {
   source = "./modules/worker-node-sg/"
-  vpc_id = var.vpc_id
+  vpc_id = module.vpc.vpc_id
 
   services = var.services
   referenced_sg_ids = {
