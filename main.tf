@@ -16,7 +16,7 @@ module "app1_lambda" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -39,7 +39,7 @@ module "app2_lambda" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -62,7 +62,7 @@ module "cluster_endpoint" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -85,7 +85,7 @@ module "dms" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -108,7 +108,7 @@ module "efs_mount_endpoint" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -131,7 +131,7 @@ module "elastic_cache" {
     # elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -200,7 +200,7 @@ module "istio_node" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    # istio_node          = module.istio_node.istio_nodes_sg_id
+    # istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk         = module.msk.msk_sg_id
     nlb         = module.nlb.nlb_sg_id
     opensearch  = module.opensearch.opensearch_sg_id
@@ -223,7 +223,7 @@ module "msk" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     # msk                 = module.msk.msk_sg_id
     nlb         = module.nlb.nlb_sg_id
     opensearch  = module.opensearch.opensearch_sg_id
@@ -246,7 +246,7 @@ module "nlb" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     # nlb                 = module.nlb.nlb_sg_id
     opensearch  = module.opensearch.opensearch_sg_id
@@ -269,7 +269,7 @@ module "opensearch" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     # opensearch          = module.opensearch.opensearch_sg_id
@@ -292,7 +292,7 @@ module "rds" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
@@ -315,7 +315,7 @@ module "worker_node" {
     elastic_cache       = module.elastic_cache.elastic_cache_sg_id
     internet_istio_node = module.internet_istio_node.internet_istio_nodes_sg_id
     internet_nlb        = module.internet_nlb.internet_nlb_sg_id
-    istio_node          = module.istio_node.istio_nodes_sg_id
+    istio_nodes         = module.istio_node.istio_nodes_sg_id
     msk                 = module.msk.msk_sg_id
     nlb                 = module.nlb.nlb_sg_id
     opensearch          = module.opensearch.opensearch_sg_id
