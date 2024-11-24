@@ -4,11 +4,6 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "vpc_id" {
-  description = "The ID of the VPC"
-  type        = string
-}
-
 variable "services" {
   description = "List of services requiring VPC endpoint security groups"
   type        = list(string)
