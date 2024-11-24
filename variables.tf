@@ -12,6 +12,7 @@ variable "vpc_id" {
 variable "services" {
   description = "List of services requiring VPC endpoint security groups"
   type        = list(string)
+  default     = ["ec2", "ssm"]
 }
 
 variable "referenced_sg_ids" {
