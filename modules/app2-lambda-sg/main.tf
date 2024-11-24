@@ -4,7 +4,9 @@ resource "aws_security_group" "app2_lambda" {
 }
 
 output "app2_lambda_sg_id" {
-  value = aws_security_group.app2_lambda.id
+  value = {
+    app2_lambda = aws_security_group.app2_lambda.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "app2_lambda_ingress_rule1" {

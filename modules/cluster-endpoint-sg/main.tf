@@ -4,7 +4,9 @@ resource "aws_security_group" "cluster_endpoint" {
 }
 
 output "cluster_endpoint_sg_id" {
-  value = aws_security_group.cluster_endpoint.id
+    value = {
+    cluster_endpoint = aws_security_group.cluster_endpoint.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "cluster_endpoint_ingress_rule1" {

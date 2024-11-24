@@ -12,7 +12,7 @@ locals {
 
 resource "aws_security_group" "vpc_endpoint_sg" {
   for_each    = toset(var.services)
-
+  name        = "${each.key}-vpce-sg"
   vpc_id      = var.vpc_id
   description = "Security group for VPC endpoint ${each.key}"
 }

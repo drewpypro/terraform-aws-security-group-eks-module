@@ -4,7 +4,9 @@ resource "aws_security_group" "rds" {
 }
 
 output "rds_sg_id" {
-  value = aws_security_group.rds.id
+  value = {
+    rds = aws_security_group.rds.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "rds_ingress_rule1" {

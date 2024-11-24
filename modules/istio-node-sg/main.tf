@@ -4,7 +4,9 @@ resource "aws_security_group" "istio_node" {
 }
 
 output "istio_node_sg_id" {
-  value = aws_security_group.istio_node.id
+  value = {
+    istio_node = aws_security_group.istio_node.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "istio_node_ingress_rule1" {

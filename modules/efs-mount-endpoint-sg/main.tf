@@ -4,7 +4,9 @@ resource "aws_security_group" "efs_mount_endpoint" {
 }
 
 output "efs_mount_endpoint_sg_id" {
-  value = aws_security_group.efs_mount_endpoint.id
+  value = {
+    efs_mount_endpoint = aws_security_group.efs_mount_endpoint.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "efs_mount_endpoint_ingress_rule1" {

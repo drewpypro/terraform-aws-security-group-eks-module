@@ -4,7 +4,9 @@ resource "aws_security_group" "dms" {
 }
 
 output "dms_sg_id" {
-  value = aws_security_group.dms.id
+  value = {
+    dms = aws_security_group.dms.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "dms_ingress_rule1" {

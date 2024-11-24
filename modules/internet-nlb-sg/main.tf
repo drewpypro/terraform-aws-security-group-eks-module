@@ -4,7 +4,9 @@ resource "aws_security_group" "internet_nlb" {
 }
 
 output "internet_nlb_sg_id" {
-  value = aws_security_group.internet_nlb.id
+  value = {
+    internet_nlb = aws_security_group.internet_nlb.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "internet_nlb_ingress_rule1" {

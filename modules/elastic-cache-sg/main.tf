@@ -4,7 +4,9 @@ resource "aws_security_group" "elastic_cache" {
 }
 
 output "elastic_cache_sg_id" {
-  value = aws_security_group.elastic_cache.id
+  value = {
+    elastic_cache = aws_security_group.elastic_cache.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "elastic_cache_ingress_rule1" {

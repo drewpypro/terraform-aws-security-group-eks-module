@@ -4,7 +4,9 @@ resource "aws_security_group" "opensearch" {
 }
 
 output "opensearch_sg_id" {
-  value = aws_security_group.opensearch.id
+  value = {
+    opensearch = aws_security_group.opensearch.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "opensearch_ingress_rule1" {

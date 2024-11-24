@@ -4,7 +4,9 @@ resource "aws_security_group" "msk" {
 }
 
 output "msk_sg_id" {
-  value = aws_security_group.msk.id
+  value = {
+    msk = aws_security_group.msk.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "msk_ingress_rule1" {

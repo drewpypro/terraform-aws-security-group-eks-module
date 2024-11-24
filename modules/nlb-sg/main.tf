@@ -4,7 +4,9 @@ resource "aws_security_group" "nlb" {
 }
 
 output "nlb_sg_id" {
-  value = aws_security_group.nlb.id
+  value = {
+    nlb = aws_security_group.nlb.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "nlb_ingress_rule1" {
