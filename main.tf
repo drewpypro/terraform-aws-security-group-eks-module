@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.aws_region
+}
+
 module "app1_lambda" {
   source = "./modules/app1-lambda-sg/"
   vpc_id = module.vpc.vpc_id
