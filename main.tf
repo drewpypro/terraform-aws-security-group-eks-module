@@ -2,7 +2,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-module "vpce_sg_module" {
+module "vpce_module_sg" {
   source = "./modules/vpce-module-sg/"
   vpc_id = module.vpc.vpc_id
 
