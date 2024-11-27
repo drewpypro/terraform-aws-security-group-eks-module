@@ -3,7 +3,7 @@ resource "aws_security_group" "elastic_cache" {
   vpc_id      = var.vpc_id
 }
 
-output "elastic_cache_sg_id" {
+output "security_groups" {
   value = {
     elastic_cache = aws_security_group.elastic_cache.id
   }
@@ -28,8 +28,6 @@ resource "aws_vpc_security_group_ingress_rule" "elastic_cache_ingress_rule2" {
 
 resource "aws_vpc_security_group_egress_rule" "elastic_cache_egress_rule1" {
   security_group_id = aws_security_group.elastic_cache.id
-  from_port         = 0
-  to_port           = 0
   ip_protocol       = "-1"
   cidr_ipv4         = "0.0.0.0/0"
 }

@@ -17,7 +17,7 @@ resource "aws_security_group" "vpc_endpoint_sg" {
   description = "Security group for VPC endpoint ${each.key}"
 }
 
-output "vpce_sg_module_sg_id" {
+output "security_groups" {
   description = "Map of service names to security group IDs"
   value       = { for key, sg in aws_security_group.vpc_endpoint_sg : key => sg.id }
 }

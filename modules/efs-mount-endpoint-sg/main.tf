@@ -3,7 +3,7 @@ resource "aws_security_group" "efs_mount_endpoint" {
   vpc_id      = var.vpc_id
 }
 
-output "efs_mount_endpoint_sg_id" {
+output "security_groups" {
   value = {
     efs_mount_endpoint = aws_security_group.efs_mount_endpoint.id
   }
@@ -28,8 +28,6 @@ resource "aws_vpc_security_group_ingress_rule" "efs_mount_endpoint_ingress_rule2
 
 resource "aws_vpc_security_group_egress_rule" "efs_mount_endpoint_egress_rule1" {
   security_group_id = aws_security_group.efs_mount_endpoint.id
-  from_port         = 0
-  to_port           = 0
   ip_protocol       = "-1"
   cidr_ipv4         = "0.0.0.0/0"
 }

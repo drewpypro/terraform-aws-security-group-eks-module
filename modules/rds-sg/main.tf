@@ -3,7 +3,7 @@ resource "aws_security_group" "rds" {
   vpc_id      = var.vpc_id
 }
 
-output "rds_sg_id" {
+output "security_groups" {
   value = {
     rds = aws_security_group.rds.id
   }
@@ -28,8 +28,6 @@ resource "aws_vpc_security_group_ingress_rule" "rds_ingress_rule2" {
 
 resource "aws_vpc_security_group_egress_rule" "rds_egress_rule1" {
   security_group_id = aws_security_group.rds.id
-  from_port         = 0
-  to_port           = 0
   ip_protocol       = "-1"
   cidr_ipv4         = "0.0.0.0/0"
 }
