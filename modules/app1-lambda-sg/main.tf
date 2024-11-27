@@ -3,8 +3,10 @@ resource "aws_security_group" "app1_lambda" {
   vpc_id      = var.vpc_id
 }
 
-output "app1_lambda_sg_id" {
-  value = aws_security_group.app1_lambda.id
+output "security_groups" {
+  value = {
+    app1_lambda = aws_security_group.app1_lambda.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "app1_lambda_ingress_rule1" {

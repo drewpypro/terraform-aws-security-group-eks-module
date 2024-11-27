@@ -3,8 +3,10 @@ resource "aws_security_group" "dms" {
   vpc_id      = var.vpc_id
 }
 
-output "dms_sg_id" {
-  value = aws_security_group.dms.id
+output "security_groups" {
+  value = {
+    dms = aws_security_group.dms.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "dms_ingress_rule1" {
@@ -26,8 +28,6 @@ resource "aws_vpc_security_group_ingress_rule" "dms_ingress_rule2" {
 
 resource "aws_vpc_security_group_egress_rule" "dms_egress_rule1" {
   security_group_id = aws_security_group.dms.id
-  from_port         = 0
-  to_port           = 0
   ip_protocol       = "-1"
   cidr_ipv4         = "0.0.0.0/0"
 }

@@ -3,8 +3,10 @@ resource "aws_security_group" "app2_lambda" {
   vpc_id      = var.vpc_id
 }
 
-output "app2_lambda_sg_id" {
-  value = aws_security_group.app2_lambda.id
+output "security_groups" {
+  value = {
+    app2_lambda = aws_security_group.app2_lambda.id
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "app2_lambda_ingress_rule1" {
@@ -26,8 +28,6 @@ resource "aws_vpc_security_group_ingress_rule" "app2_lambda_ingress_rule2" {
 
 resource "aws_vpc_security_group_egress_rule" "app2_lambda_egress_rule1" {
   security_group_id = aws_security_group.app2_lambda.id
-  from_port         = 0
-  to_port           = 0
   ip_protocol       = "-1"
   cidr_ipv4         = "0.0.0.0/0"
 }
