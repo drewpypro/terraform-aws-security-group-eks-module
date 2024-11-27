@@ -22,7 +22,7 @@ module "vpce_module_sg" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  # vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  # vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -46,7 +46,7 @@ module "app1_lambda" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
 
   }
 }
@@ -71,7 +71,7 @@ module "app2_lambda" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -95,7 +95,7 @@ module "cluster_endpoint" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -119,7 +119,7 @@ module "dms" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -143,7 +143,7 @@ module "efs_mount_endpoint" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -167,7 +167,7 @@ module "elastic_cache" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -191,7 +191,7 @@ module "internet_istio_node" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -215,7 +215,7 @@ module "internet_nlb" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -239,7 +239,7 @@ module "istio_node" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -263,7 +263,7 @@ module "msk" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -287,7 +287,7 @@ module "nlb" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -311,7 +311,7 @@ module "opensearch" {
   # opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -335,7 +335,7 @@ module "rds" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   # rds                 = module.rds.security_groups["rds"]
   worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
 
@@ -359,6 +359,6 @@ module "worker_node" {
   opensearch          = module.opensearch.security_groups["opensearch"]
   rds                 = module.rds.security_groups["rds"]
   # worker_node         = module.worker_node.security_groups["worker_node"]
-  vpce_module_sg      = module.vpce_module_sg.security_groups["vpce_module"]
+  vpce_module_sg      = module.vpce_module_sg.security_groups
   }
 }
